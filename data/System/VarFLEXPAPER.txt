@@ -1,0 +1,22 @@
+%META:TOPICINFO{author="micha" comment="save topic" date="1291645748" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="FlexPaperPlugin"}%
+#VarFLEXPAPER
+---+++ FLEXPAPER
+   * embed a PDF document into the webpage
+   * Syntax: =%<nop>FLEXPAPER{"attachment" ..."}%=
+   * Supported Parameters:
+     | *Parameter:* | *Description:* | *Default:* |
+     | ="attachment"= | file to preview | required parameter |
+     | =topic="..."= | topic where the attachment is attached to | BASETOPIC |
+     | =width="..."= | width of the document viewer (e.g. 800 or "100%" | 800 |
+     | =height="..."= | height of the document viewer | 600 | 
+     | =scale="..."= | initial zoom factor that should be used. Should be a number above 0 (1=100%)  | 1.0 |
+     | =layout="fitwidth/fitpage/scale"= | initial layout of the viewer after the document has been loaded | fitwidth |
+     | =printtools="on/off"= | switch on/off print tools in the toolbar | on |
+     | =viewmodetools="on/off"= | switch on/off viewmode tools in the toolbar | on |
+     | =zoomtools="on/off"= | switch on/off zoom tools in the toolbar | on |
+     | =navtools="on/off"= | switch on/off navigation tools in the toolbar | on |
+     | =cursortools="on/off"= | switch on/off cursor tools in the toolbar | on |
+     | =searchtools="on/off"= | switch on/off search tools in the toolbar | on |
+     | =fullscreentools="on/off"= | switch on/off fullscreen tools in the toolbar | on |
+     | =toolbar="on/off"= | switch on/off all of the above tools | on |
