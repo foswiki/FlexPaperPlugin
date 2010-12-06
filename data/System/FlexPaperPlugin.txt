@@ -1,0 +1,46 @@
+%META:TOPICINFO{author="micha" comment="save topic" date="1291645860" format="1.1" reprev="2" version="2"}%
+---+!! %TOPIC%
+%SHORTDESCRIPTION%
+
+%TOC%
+
+This adds [[http://flexpaper.devaldi.com/][FlexPaper]] capabilities to Foswiki.
+
+!FlexPaper is an open source light weight document viewer component designed to
+work together with libraries such as [[http://www.swftools.org/][PDF2SWF]], making it possible to display PDF
+files in Adobe Flex and other Flash based applications.
+
+!FlexPaper displays documents in your favorite browser using flash. Its way of
+reusing display containers makes it possible to view large documents and books.
+
+---++ Screenshot
+
+<div class="foswikiImage">
+<img src="%ATTACHURLPATH%/FlexPaperSnap1.png" width="655" height="342" />
+</div>
+
+---++ Syntax
+%INCLUDE{"VarFLEXPAPER"}%
+
+---++ Installation Instructions
+
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+<!--
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
+-->
+
+|  Author(s): | Michael Daum|
+|  Copyright: | &copy; 2010 Michael Daum http://michaeldaumconsulting.com |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  06 Dec 2010: | initial release |
+|  Dependencies: | %$DEPENDENCIES% |
+|  Home page: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+
+%META:FILEATTACHMENT{name="FlexPaperSnap1.png" attachment="FlexPaperSnap1.png" attr="" comment="" date="1291645773" size="190387" user="micha" version="1"}%
