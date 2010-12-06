@@ -1,4 +1,5 @@
 data/System/FlexPaperPlugin.txt 0644
+data/System/VarFLEXPAPER.txt 0644
 lib/Foswiki/Plugins/FlexPaperPlugin/Config.spec 0644
 lib/Foswiki/Plugins/FlexPaperPlugin/Core.pm 0644
 lib/Foswiki/Plugins/FlexPaperPlugin.pm 0644
