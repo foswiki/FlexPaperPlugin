@@ -3,10 +3,11 @@ lib/Foswiki/Plugins/FlexPaperPlugin/Config.spec 0644
 lib/Foswiki/Plugins/FlexPaperPlugin/Core.pm 0644
 lib/Foswiki/Plugins/FlexPaperPlugin.pm 0644
 pub/System/FlexPaperPlugin/expressInstall.swf 0644
-pub/System/FlexPaperPlugin/flexpaper_flash.js 0644
-pub/System/FlexPaperPlugin/flexpaper_flash.js.gz 0644
-pub/System/FlexPaperPlugin/flexpaper_flash.uncompressed.js 0644
+pub/System/FlexPaperPlugin/FlexPaperSnap1.png 0644
 pub/System/FlexPaperPlugin/FlexPaperViewer.swf 0644
+pub/System/FlexPaperPlugin/jquery.flexpaper.js 0644
+pub/System/FlexPaperPlugin/jquery.flexpaper.js.gz 0644
+pub/System/FlexPaperPlugin/jquery.flexpaper.uncompressed.js 0644
 pub/System/FlexPaperPlugin/Makefile 0644
 pub/System/FlexPaperPlugin/swfobject.js 0644
 pub/System/FlexPaperPlugin/swfobject.js.gz 0644

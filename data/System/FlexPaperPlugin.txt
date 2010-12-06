@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="save topic" date="1291645860" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1291645860" format="1.1" reprev="2" version="2"}%
 ---+!! %TOPIC%
 %SHORTDESCRIPTION%
 
@@ -43,4 +43,4 @@ reusing display containers makes it possible to view large documents and books.
 |  Support: | Foswiki:Support/%TOPIC% |
 
 
-%META:FILEATTACHMENT{name="FlexPaperSnap1.png" attachment="FlexPaperSnap1.png" attr="" comment="" date="1291645773" size="190387" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="FlexPaperSnap1.png" attachment="FlexPaperSnap1.png" attr="" comment="" date="1291645773" size="190387" user="ProjectContributor" version="1"}%
