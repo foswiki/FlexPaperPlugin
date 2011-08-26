@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# FlexPaperPlugin is Copyright (C) 2010 Michael Daum http://michaeldaumconsulting.com
+# FlexPaperPlugin is Copyright (C) 2010-2011 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -27,7 +27,7 @@ use warnings;
 use Foswiki::Func ();
 
 our $VERSION = '$Rev$';
-our $RELEASE = '1.00';
+our $RELEASE = '2.00';
 our $SHORTDESCRIPTION = 'flash-based document viewer component';
 our $NO_PREFS_IN_TOPIC = 1;
 our $baseWeb;
@@ -45,6 +45,7 @@ sub initPlugin {
   ($baseTopic, $baseWeb) = @_;
 
   Foswiki::Func::registerTagHandler('FLEXPAPER', \&FLEXPAPER);
+  Foswiki::Func::registerTagHandler('FLEXPAPERINIT', \&FLEXPAPERINIT);
 
   $doneInit = 0;
   return 1;
@@ -67,15 +68,28 @@ sub init {
 
 =begin TML
 
----+ MACRO($session, $params, $theTopic, $theWeb) -> $string
+---+ FLEXPAPER($session, $params, $theTopic, $theWeb) -> $string
 
-stub for MACRO to initiate the core before handling the macro
+stub for FLEXPAPER to initiate the core before handling the macro
 
 =cut
 
 sub FLEXPAPER {
   init();
   return Foswiki::Plugins::FlexPaperPlugin::Core::FLEXPAPER(@_);
+}
+
+=begin TML
+
+---+ FLEXPAPERINIT()
+
+just triggers the init of the core
+
+=cut
+
+sub FLEXPAPERINIT {
+  init();
+  return "";
 }
 
 1;

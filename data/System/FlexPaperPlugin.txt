@@ -21,6 +21,7 @@ reusing display containers makes it possible to view large documents and books.
 
 ---++ Syntax
 %INCLUDE{"VarFLEXPAPER"}%
+%INCLUDE{"VarFLEXPAPERINIT"}%
 
 ---++ Installation Instructions
 
@@ -32,11 +33,12 @@ reusing display containers makes it possible to view large documents and books.
 -->
 
 |  Author(s): | Michael Daum|
-|  Copyright: | &copy; 2010 Michael Daum http://michaeldaumconsulting.com |
+|  Copyright: | &copy; 2010-2011 Michael Daum http://michaeldaumconsulting.com |
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  25 Aug 2011: | added FLEXPAPERINIT; upgraded to flexpaper-1.4.5 |
 |  06 Dec 2010: | initial release |
 |  Dependencies: | %$DEPENDENCIES% |
 |  Home page: | Foswiki:Extensions/%TOPIC% |

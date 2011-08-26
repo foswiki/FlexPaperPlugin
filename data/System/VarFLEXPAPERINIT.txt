@@ -1,0 +1,6 @@
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1291645748" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="FlexPaperPlugin"}%
+#VarFLEXPAPERINIT
+---+++ FLEXPAPERINIT
+   * initialize the flexpaper javascript; this is useful when the actual FLEXPAPER macro is loaded later on asynchronously
+   * Syntax: =%<nop>FLEXPAPERINIT%=

@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# FlexPaperPlugin is Copyright (C) 2010 Michael Daum http://michaeldaumconsulting.com
+# FlexPaperPlugin is Copyright (C) 2010-2011 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -56,6 +56,17 @@ initializer for the plugin core; called before any macro hanlder is executed
 
 sub init {
   ($baseWeb, $baseTopic) = @_;
+
+  Foswiki::Func::addToZone("script", "SWFOBJECT",
+    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/swfobject.js'></script>"
+  );
+  Foswiki::Func::addToZone("script", "FLEXPAPER::META",
+    "<meta name='foswiki.FlexPaperPlugin.viewer' content='%ENCODE{\"%PUBURL%/%SYSTEMWEB%/FlexPaperPlugin/FlexPaperViewer.swf\" type=\"html\"}%' />"
+  );
+  Foswiki::Func::addToZone("script", "FLEXPAPER::JS",
+    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/jquery.flexpaper.js'></script>",
+    "SWFOBJECT, JQUERYPLUGIN::METADATA"
+  );
 
   writeDebug("called init");
 }
@@ -149,6 +160,8 @@ sub FLEXPAPER {
   my $origModified = modificationTime($origFile);
   my $cachedModified = modificationTime($swfFile);
 
+  writeDebug("origFile=$origFile, origModified=$origModified, swfFile=$swfFile, cachedModified=$cachedModified");
+
   if ($origModified > $cachedModified) {
     writeDebug("generating new swf for $theFileName at $swfFile");
     my $pdf2swfCmd = $Foswiki::cfg{FlexPaperPlugin}{Pdf2swfCmd} || 'pdf2swf -q -f -T 9 -t -s storeallcharacters %FILENAME|F% -o %OUTPUT|F%';
@@ -210,7 +223,7 @@ sub FLEXPAPER {
   }
 
   my $id = "flexPaper".Foswiki::Plugins::JQueryPlugin::Plugins::getRandom();
-  my $swfUrl = $Foswiki::cfg{PubUrlPath}."/".$theWeb."/".$theTopic."/_flexpaper_".$fileBase.".swf";
+  my $swfUrl = $Foswiki::cfg{PubUrlPath}."/".$theWeb."/".$theTopic."/_flexpaper_".$fileBase.".swf?t=".time();
   my $result = "<noautolink><div id='$id' class='jqFlexPaper {".
     "source:\"$swfUrl\", ".
     "width:\"$theWidth\", ".
@@ -228,17 +241,6 @@ sub FLEXPAPER {
     "localeChain:\"$locale\"".
     "}'></div></noautolink>";
   				  
-
-  Foswiki::Func::addToZone("script", "SWFOBJECT",
-    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/swfobject.js'></script>"
-  );
-  Foswiki::Func::addToZone("script", "FLEXPAPER::META",
-    "<meta name='foswiki.FlexPaperPlugin.viewer' content='%ENCODE{\"%PUBURL%/%SYSTEMWEB%/FlexPaperPlugin/FlexPaperViewer.swf\" type=\"html\"}%' />"
-  );
-  Foswiki::Func::addToZone("script", "FLEXPAPER::JS",
-    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/jquery.flexpaper.js'></script>",
-    "SWFOBJECT, JQUERYPLUGIN::METADATA"
-  );
 
   return $result;
 }
