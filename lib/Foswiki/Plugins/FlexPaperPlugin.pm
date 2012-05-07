@@ -26,13 +26,14 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION           = '$Rev$';
-our $RELEASE           = '2.00';
-our $SHORTDESCRIPTION  = 'flash-based document viewer component';
+our $VERSION = '$Rev$';
+our $RELEASE = '2.00';
+our $SHORTDESCRIPTION = 'flash-based document viewer component';
 our $NO_PREFS_IN_TOPIC = 1;
 our $baseWeb;
 our $baseTopic;
 our $doneInit;
+
 
 =begin TML
 
@@ -41,13 +42,13 @@ our $doneInit;
 =cut
 
 sub initPlugin {
-    ( $baseTopic, $baseWeb ) = @_;
+  ($baseTopic, $baseWeb) = @_;
 
-    Foswiki::Func::registerTagHandler( 'FLEXPAPER',     \&FLEXPAPER );
-    Foswiki::Func::registerTagHandler( 'FLEXPAPERINIT', \&FLEXPAPERINIT );
+  Foswiki::Func::registerTagHandler('FLEXPAPER', \&FLEXPAPER);
+  Foswiki::Func::registerTagHandler('FLEXPAPERINIT', \&FLEXPAPERINIT);
 
-    $doneInit = 0;
-    return 1;
+  $doneInit = 0;
+  return 1;
 }
 
 =begin TML
@@ -57,12 +58,12 @@ sub initPlugin {
 =cut
 
 sub init {
-    return if $doneInit;
+  return if $doneInit;
 
-    $doneInit = 1;
+  $doneInit = 1;
 
-    require Foswiki::Plugins::FlexPaperPlugin::Core;
-    Foswiki::Plugins::FlexPaperPlugin::Core::init( $baseWeb, $baseTopic );
+  require Foswiki::Plugins::FlexPaperPlugin::Core;
+  Foswiki::Plugins::FlexPaperPlugin::Core::init($baseWeb, $baseTopic);
 }
 
 =begin TML
@@ -74,8 +75,8 @@ stub for FLEXPAPER to initiate the core before handling the macro
 =cut
 
 sub FLEXPAPER {
-    init();
-    return Foswiki::Plugins::FlexPaperPlugin::Core::FLEXPAPER(@_);
+  init();
+  return Foswiki::Plugins::FlexPaperPlugin::Core::FLEXPAPER(@_);
 }
 
 =begin TML
@@ -87,8 +88,8 @@ just triggers the init of the core
 =cut
 
 sub FLEXPAPERINIT {
-    init();
-    return "";
+  init();
+  return "";
 }
 
 1;
