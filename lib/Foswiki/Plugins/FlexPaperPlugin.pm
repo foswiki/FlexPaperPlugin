@@ -26,8 +26,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '$Rev$';
-our $RELEASE = '2.00';
+our $VERSION = '2.01';
+our $RELEASE = '2.01';
 our $SHORTDESCRIPTION = 'flash-based document viewer component';
 our $NO_PREFS_IN_TOPIC = 1;
 our $baseWeb;

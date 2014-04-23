@@ -32,18 +32,18 @@ our $baseWeb;
 our $baseTopic;
 #our %cache;
 
-use constant DEBUG => 0; # toggle me
+use constant TRACE => 0; # toggle me
 
 =begin TML
 
 ---++ writeDebug($message(
 
-prints a debug message to STDERR when this module is in DEBUG mode
+prints a debug message to STDERR when this module is in TRACE mode
 
 =cut
 
 sub writeDebug {
-  print STDERR "FlexPaperPlugin::Core - $_[0]\n" if DEBUG;
+  print STDERR "FlexPaperPlugin::Core - $_[0]\n" if TRACE;
 }
 
 =begin TML
