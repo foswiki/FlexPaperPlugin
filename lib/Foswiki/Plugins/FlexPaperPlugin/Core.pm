@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# FlexPaperPlugin is Copyright (C) 2010-2011 Michael Daum http://michaeldaumconsulting.com
+# FlexPaperPlugin is Copyright (C) 2010-2012 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -58,13 +58,13 @@ sub init {
   ($baseWeb, $baseTopic) = @_;
 
   Foswiki::Func::addToZone("script", "SWFOBJECT",
-    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/swfobject.js'></script>"
+    "<script src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/swfobject.js'></script>"
   );
   Foswiki::Func::addToZone("script", "FLEXPAPER::META",
     "<meta name='foswiki.FlexPaperPlugin.viewer' content='%ENCODE{\"%PUBURL%/%SYSTEMWEB%/FlexPaperPlugin/FlexPaperViewer.swf\" type=\"html\"}%' />"
   );
   Foswiki::Func::addToZone("script", "FLEXPAPER::JS",
-    "<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/jquery.flexpaper.js'></script>",
+    "<script src='%PUBURLPATH%/%SYSTEMWEB%/FlexPaperPlugin/jquery.flexpaper.js'></script>",
     "SWFOBJECT, JQUERYPLUGIN::METADATA"
   );
 

@@ -1,0 +1,13 @@
+igp_*
+*.swp
+*.gz
+pub/System/FlexPaperPlugin/tmp/
+pub/System/FlexPaperPlugin/swfobject.js
+pub/System/FlexPaperPlugin/jquery.flexpaper.js
+/FlexPaperPlugin.md5
+/FlexPaperPlugin.sha1
+/FlexPaperPlugin.tgz
+/FlexPaperPlugin.txt
+/FlexPaperPlugin.zip
+/FlexPaperPlugin_installer
+/FlexPaperPlugin_installer.pl

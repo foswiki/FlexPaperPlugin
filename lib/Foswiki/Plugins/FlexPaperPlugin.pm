@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# FlexPaperPlugin is Copyright (C) 2010-2011 Michael Daum http://michaeldaumconsulting.com
+# FlexPaperPlugin is Copyright (C) 2010-2012 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -26,8 +26,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '2.01';
-our $RELEASE = '2.01';
+our $VERSION = '2.10';
+our $RELEASE = '29 Apr 2022';
 our $SHORTDESCRIPTION = 'flash-based document viewer component';
 our $NO_PREFS_IN_TOPIC = 1;
 our $baseWeb;

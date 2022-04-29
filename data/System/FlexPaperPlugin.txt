@@ -1,6 +1,10 @@
 %META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1291645860" format="1.1" reprev="2" version="2"}%
 ---+!! %TOPIC%
-%SHORTDESCRIPTION%
+%FORMFIELD{"Description"}%
+
+<div class="foswikiWarningMessage">
+Warning: This plugin is unmaintained. Please use Foswiki:Extensions/DocumentViewerPlugin instead. 
+</div>
 
 %TOC%
 
@@ -24,25 +28,24 @@ reusing display containers makes it possible to view large documents and books.
 %INCLUDE{"VarFLEXPAPERINIT"}%
 
 ---++ Installation Instructions
-
 %$INSTALL_INSTRUCTIONS%
 
----++ Info
-<!--
-   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
--->
+---++ Dependencies
+%$DEPENDENCIES%
 
-|  Author(s): | Michael Daum|
-|  Copyright: | &copy; 2010-2011 Michael Daum http://michaeldaumconsulting.com |
-|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
-|  Release: | %$RELEASE% |
-|  Version: | %$VERSION% |
-|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+---++ Change History
+|  29 Apr 2022: | docu fixes; fixes for build script |
 |  25 Aug 2011: | added FLEXPAPERINIT; upgraded to flexpaper-1.4.5 |
 |  06 Dec 2010: | initial release |
-|  Dependencies: | %$DEPENDENCIES% |
-|  Home page: | Foswiki:Extensions/%TOPIC% |
-|  Support: | Foswiki:Support/%TOPIC% |
-
 
 %META:FILEATTACHMENT{name="FlexPaperSnap1.png" attachment="FlexPaperSnap1.png" attr="" comment="" date="1291645773" size="190387" user="ProjectContributor" version="1"}%
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Michael Daum"}%
+%META:FIELD{name="Copyright" title="Copyright" value="&copy; 2010-2022 Michael Daum"}%
+%META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
+%META:FIELD{name="Home" title="Home" value="Foswiki:Extensions/%TOPIC%"}%
+%META:FIELD{name="License" title="License" value="[[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]]"}%
+%META:FIELD{name="Release" title="Release" value="%$RELEASE%"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%TOPIC%"}%
+%META:FIELD{name="Support" title="Support" value="Foswiki:Support/%TOPIC%"}%
+%META:FIELD{name="Version" title="Version" value="%$VERSION%"}%

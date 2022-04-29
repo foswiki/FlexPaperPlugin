@@ -52,13 +52,11 @@ function getDocViewer(){
   };
 
 
-  $(".jqFlexPaper:not(.jqFlexPaperInited)").livequery(function() {
+  $(".jqFlexPaper").livequery(function() {
     var $this = $(this),
       opts,
       viewer,
       id;
-
-    $this.addClass("jqFlexPaperInited");
 
     opts = $.extend({}, defaults, $this.metadata());
     opts.SwfFile = escape(opts.source),
