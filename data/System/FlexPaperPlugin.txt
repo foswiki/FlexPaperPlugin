@@ -34,6 +34,8 @@ reusing display containers makes it possible to view large documents and books.
 %$DEPENDENCIES%
 
 ---++ Change History
+%TABLE{columnwidths="7em" tablewidth="100%"}%
+|  20 Dec 2024: | removed dependency on jquery.metadata |
 |  29 Apr 2022: | docu fixes; fixes for build script |
 |  25 Aug 2011: | added FLEXPAPERINIT; upgraded to flexpaper-1.4.5 |
 |  06 Dec 2010: | initial release |
@@ -41,7 +43,7 @@ reusing display containers makes it possible to view large documents and books.
 %META:FILEATTACHMENT{name="FlexPaperSnap1.png" attachment="FlexPaperSnap1.png" attr="" comment="" date="1291645773" size="190387" user="ProjectContributor" version="1"}%
 %META:FORM{name="PackageForm"}%
 %META:FIELD{name="Author" title="Author" value="Michael Daum"}%
-%META:FIELD{name="Copyright" title="Copyright" value="&copy; 2010-2022 Michael Daum"}%
+%META:FIELD{name="Copyright" title="Copyright" value="&copy; 2010-2024 Michael Daum"}%
 %META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
 %META:FIELD{name="Home" title="Home" value="Foswiki:Extensions/%TOPIC%"}%
 %META:FIELD{name="License" title="License" value="[[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]]"}%

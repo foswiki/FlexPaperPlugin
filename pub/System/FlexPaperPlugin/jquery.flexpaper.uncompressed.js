@@ -58,7 +58,7 @@ function getDocViewer(){
       viewer,
       id;
 
-    opts = $.extend({}, defaults, $this.metadata());
+    opts = $.extend({}, defaults, $this.data());
     opts.SwfFile = escape(opts.source),
 
 
